@@ -3,13 +3,17 @@ from flask import render_template,request,redirect,url_for,session, Response, Bl
 from flask_mysqldb import MySQL,MySQLdb
 from flask import send_from_directory
 from datetime import datetime
+from ..Database.Database import database
+
 
 import os
+app=Flask(__name__)
 
 route = Blueprint('route', __name__)
+mysql = MySQL(app)
+app.config.from_object(database)
 
 
-route.secret_key = "VelaDanAik123"
 
 @route.route('/')
 def index():
@@ -17,7 +21,7 @@ def index():
 
 @route.route('/login')
 def asd():
-    return render_template('/Dashboard-Admin/login.html')
+    return render_template('/login/login.html')
 
 @route.route('/dashboard-admin')
 def mostrar_dashboardadmin():
@@ -59,7 +63,7 @@ def mostrar_dashboardusu():
     return render_template('/Dashboard-Usuario/Usuario_Dashboard.html')
 
 
-@route.route('/acceso-login', methods= ["GET", "POST"])
+@app.route('/acceso-login', methods= ["GET", "POST"])
 def login():
    
     if request.method == 'POST' and 'Usua_Correo' in request.form and 'Usua_Pass' in request.form:
@@ -83,8 +87,7 @@ def login():
         else:
             return render_template('index.html',mensaje="Usuario O Contraseña Incorrectas")
 
-route.route('proceso')
-def proceso():
-    
-    return render_template('')
 
+
+if __name__== '__main__':
+    app.run(debug=True)

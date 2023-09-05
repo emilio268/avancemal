@@ -3,8 +3,8 @@ from flask import render_template,request,redirect,url_for,session, Response, Bl
 from config import Config
 from .Database.Database import database
 from .routes import route
-from .empleados.empleados import empleados_blueprint
-from .clientes.clientes import clientes_blueprint
+from .Controller.empleados import empleados_blueprint
+from .Controller.clientes import clientes_blueprint
 
 
 app = Flask(__name__, static_folder=Config.STATIC_FOLDER, template_folder=Config.TEMPALTE_FOLDER)
