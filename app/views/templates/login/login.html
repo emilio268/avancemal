@@ -7,7 +7,7 @@
   <div class="container">
         <div class="forms-container">
           <div class="form-control signup-form">
-            <form method="POST" action="/registro">
+            <form method="POST" name="registro" action="/registro">
               <h2>Registrate!!!</h2>
               <input type="text" placeholder="Nombre" id="Clie_Nombre" name="Clie_Nombre" required />
               <input type="email" placeholder="Correo" id="Usua_Correo" name="Usua_Correo" required />
@@ -27,7 +27,7 @@
               <h2>Iniciar Sesion</h2>
               <input type="text" placeholder="Correo" required name="Usua_Correo" />
               <input type="password" placeholder="Contraseña" required name="Usua_Pass" />
-              <button>Iniciar Sesion</button>
+              <button type="submit" name="submit" onclick="validarpassword(document.registro.Usua_Pass)">Iniciar Sesion</button>
             </form>
             <span>Inicia sesión con</span>
             <div class="socials">
@@ -59,6 +59,6 @@
         </div>
       </div>
 
-      <script src="../static/js/script_login.js"></script>
+      <script src="../../static/js/script_login.js"></script>
 
   </body>
