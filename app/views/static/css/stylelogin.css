@@ -62,7 +62,7 @@ body {
   border: none;
   padding: 20px;
   margin-top: 5px;
-  background-color: #791818;
+  background-color: #000000;
   border-radius: 25px;
   color: #fff;
   cursor: pointer;
@@ -131,8 +131,9 @@ body {
 }
 .container .intros-container .intro-control button:focus, .container .intros-container .intro-control button:hover {
   outline: none;
-  background-color: #791818;/*colo efecto hover*/
+  background-color: #000000;/*colo efecto hover*/
   color: white;
+  border: solid rgb(255, 255, 255);
 }
 .container .intros-container .intro-control h3,
 .container .intros-container .intro-control p {
@@ -153,7 +154,7 @@ body {
   transform: translateX(-100%);
 }
 .change .forms-container .form-control.signup-form button {
-  background-color: #791818;/*color boton derecha segunda parte*/
+  background-color: #000000;/*color boton derecha segunda parte*/
 }
 .change .forms-container .form-control.signup-form input{
  
@@ -173,8 +174,9 @@ body {
   background-color: white;/* color de fondo  noton derecha segunda parte */
 }
 .change .intros-container .intro-control #signin-btn:hover{
-  background-color: #791818;
+  background-color: #000000;
   color:  white;
+  border: solid white;
 }
 .change .intros-container .intro-control.signin-intro {
   opacity: 0;
