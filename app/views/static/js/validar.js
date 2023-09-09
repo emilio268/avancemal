@@ -8,7 +8,7 @@ const expresiones = {
 
 const campos = {
 	correo: false,
-    password: false,
+    password: false
 }
 
 const validarFormulario = (e) => {
@@ -20,7 +20,6 @@ const validarFormulario = (e) => {
 
 		case "password":
 			validarCampo(expresiones.password, e.target, 'password');
-			validarPassword2();
 		break;
 		
 	}
@@ -55,7 +54,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+	if(campos.correo && campos.password && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
