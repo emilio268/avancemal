@@ -1,58 +1,61 @@
 {% include '/Dashboard-Admin/layout.html' %}
 
+
 <!-- Main Content -->
 <main>
 
     <!-- End of Analyses -->
     <!-- New Users Section -->
-    <div class="new-users">
-        <h2>New Users</h2>
-        <div class="user-list">
-            <div class="user">
-                <img src="/static/images/profile-2.jpg">
-                <h2>Jack</h2>
-                <p>54 Min Ago</p>
+    <div class="info-data">
+        <div class="card">
+            <div class="head">
+                <div>
+                    <h2>{{ cantidad_empleados }}</h2>
+                    <p>Empleados</p>
+                </div>
+                <i class='bx bx-trending-up icon' ></i>
             </div>
-            <div class="user">
-                <img src="/static/images/profile-3.jpg">
-                <h2>Amir</h2>
-                <p>3 Hours Ago</p>
+          
+        </div>
+        <div class="card">
+            <div class="head">
+                <div>
+                    <h2>{{ cantidad_clientes }}</h2>
+                    <p>Clientes</p>
+                </div>
+                <i class='bx bx-trending-down icon down' ></i>
             </div>
-            <div class="user">
-                <img src="/static/images/profile-4.jpg">
-                <h2>Ember</h2>
-                <p>6 Hours Ago</p>
+           
+        </div>
+        <div class="card">
+            <div class="head">
+                <div>
+                    <h2>{{ cantidad_proyectos }}</h2>
+                    <p>Proyectos</p>
+                </div>
+                <i class='bx bx-trending-up icon' ></i>
             </div>
-            <div class="user">
-                <img src="/static/images/plus.png">
-                <h2>More</h2>
-                <p>New User</p>
+            
+        </div>
+        <div class="card">
+            <div class="head">
+                <div>
+                    <h2>{{ cantidad_usuarios }}</h2>
+                    <p>Usuarios Totales</p>
+                </div>
+                <i class='bx bx-trending-up icon' ></i>
             </div>
+           
         </div>
     </div>
     <!-- End of New Users Section -->
 
     <!-- Recent Orders Table -->
-    <div class="recent-orders">
-        <h2>Recent Orders</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Course Name</th>
-                    <th>Course Number</th>
-                    <th>Payment</th>
-                    <th>Status</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-        <a href="#">Show All</a>
-    </div>
     <!-- End of Recent Orders -->
 
 </main>
 <!-- End of Main Content -->
+
 
 </div>
 

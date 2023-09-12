@@ -1,19 +1,19 @@
+# __init__.py
+
 from flask import Flask
-from flask import render_template,request,redirect,url_for,session, Response, Blueprint
-from config import Config
-from .Database.Database import database
+from flaskext.mysql import MySQL
+from .config.config import Config
+from .config.configure_database import configure_database
+from .Controller.Controller import empleados_blueprint, clientes_blueprint
+from .Controller.login import login_blueprint
 from .routes import route
-from .Controller.empleados import empleados_blueprint
-from .Controller.clientes import clientes_blueprint
 
+app = Flask(__name__, static_folder=Config.STATIC_FOLDER, template_folder=Config.TEMPLATE_FOLDER)
+app.secret_key = "VelaDanAik123"
 
-app = Flask(__name__, static_folder=Config.STATIC_FOLDER, template_folder=Config.TEMPALTE_FOLDER)
-app.config.from_object(Config)
-app.config.from_object(database)
+configure_database(app)
 
-app.register_blueprint(route)
 app.register_blueprint(empleados_blueprint)
 app.register_blueprint(clientes_blueprint)
-
-
-
+app.register_blueprint(login_blueprint)
+app.register_blueprint(route)

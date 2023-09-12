@@ -1,4 +1,4 @@
-{% include 'Dashboard-Admin/header.html' %}
+{% include '/Dashboard-Admin/layout.html' %}
 
         <!-- Main Content -->
         <main>
@@ -13,8 +13,6 @@
 
             {% for cliente in clientes%}
             
-            
-
             <form  action="{{ url_for('clientes.update') }}" method="post" enctype="multipart/form-data">
                 <input type="text"value="{{ cliente[0] }}" name="CID" id="CID">
             <div class="data"> 
@@ -60,7 +58,7 @@
     <script src="../static/js/orders.js"></script>
     <script src="../static/js/index.js"></script>
 
-    {% include 'dashboard/footer.html' %}
+    {% include 'Dashboard-Admin/footer.html' %}
 
     
 </tbody>
